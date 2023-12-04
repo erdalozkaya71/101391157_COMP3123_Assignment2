@@ -1,0 +1,35 @@
+version: "3"
+services:
+  frontend:
+    # image: react-app
+    build: ./frontend
+    stdin_open: true
+    ports: 
+      - "3000:3000"
+    networks:
+      - fullstack
+  backend:
+    # image: api-server
+    build: ./backend
+    ports:
+      - "3001:3001"
+    networks:
+      - fullstack
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - fullstack
+    volumes:
+      - mongo-data:/data/db
+
+networks:
+  fullstack:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local

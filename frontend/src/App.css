@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+}
+.signup-con {
+  text-align: left;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.divbtn{
+  float: left;
+}
+
+.btn{
+  margin: 5px;
+}
+
+.view-box {
+  display: flex;
+  justify-content: center;
+  
+  height: 100vh; /* This ensures that the content is centered vertically */
+  text-align: center;
+}
+.emp-view{
+  width: 600px;
+  justify-items: center;
+  margin-left: 10px ;
+}
+
+.errmsg{
+  color: red;
+}
+app-check{
+  height: 20px;
+  width: 20px;
+  margin: 1%
+}
+
+.title-app{
+  background-color: rgb(4, 4, 79);
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
