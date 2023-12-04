@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 router.post("/signup", async (req, res) => {
     try {
         const { username, email, password } = req.body;
-        const userExist = await user.findOne({ username });
+        const userExist = await userModel.findOne({ username });
         if (userExist) {
             return res.status(409).json({ message: 'User already exists' });
         }
